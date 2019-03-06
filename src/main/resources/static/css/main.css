@@ -1,0 +1,14 @@
+.payment{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+.container{
+    display: flex;
+    justify-content:center;
+}
+.param{
+    margin:5px;
+    display: flex;
+    justify-content:space-between;
+}

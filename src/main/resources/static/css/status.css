@@ -1,0 +1,11 @@
+.container-status{
+    display: flex;
+}
+.status{
+    display:flex;
+    flex-direction: column;
+    width:200px;
+    padding: 10px;
+    margin:10px;
+    border: thick solid #0000FF;
+}

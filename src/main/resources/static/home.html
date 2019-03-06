@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Sandbox</title>
+    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/main.css"/>
+    <script type="text/javascript" src="/js/main.js"></script>
+    <script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="payment">
+        <h3>Payment Generator</h3>
+        <div class="param">
+            <label for="cust">Customer</label>
+            <input name="customer" id="cust">
+        </div>
+        <div class="param">
+            <label for="amnt">Amount</label>
+            <input name="amount" id="amnt">
+        </div>
+        <div class="param">
+            <label for="curr">Currency</label>
+            <input name="currency" id="curr">
+        </div>
+        <div class="param">
+            <label for="desc">Description</label>
+            <input name="description" id="desc">
+        </div>
+        <button onclick="payment()"> Send </button>
+    </div>
+</div>
+</body>
+</html>
