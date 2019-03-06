@@ -27,7 +27,7 @@ public class RestExecutor {
         httpHeaders.setBearerAuth(tokenStorage.getToken());
         RestTemplate restTemplate = new RestTemplate();
         HttpEntity<String> entity = new HttpEntity<>(new ObjectMapper().writeValueAsString(payment), httpHeaders);
-        ResponseEntity<PaymentTestPay> responseEntity = restTemplate.postForEntity("http://localhost:8080/payment/payment",
+        ResponseEntity<PaymentTestPay> responseEntity = restTemplate.postForEntity("https://api.testpay.com/oauth2/token",
                 entity,
                 PaymentTestPay.class);
         return responseEntity.getBody();
@@ -43,7 +43,7 @@ public class RestExecutor {
         MultiValueMap<String, String> map = new LinkedMultiValueMap<>();
         map.add("grant_type", "client_credentials");
         HttpEntity<MultiValueMap<String, String>> entity = new HttpEntity<>(map, httpHeaders);
-        ResponseEntity<TokenResponse> responseEntity = restTemplate.exchange("http://localhost:8080/oauth2/token",
+        ResponseEntity<TokenResponse> responseEntity = restTemplate.exchange("https://api.testpay.com/payments/payment",
                 HttpMethod.POST,
                 entity,
                 TokenResponse.class);
